@@ -1,0 +1,2 @@
+# inventory
+Simple inventory application
