@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 
-FROM golang:1.22 as builder
+FROM golang:1.22 AS builder
 
 # Set destination for COPY
 WORKDIR /app
@@ -9,14 +9,15 @@ WORKDIR /app
 COPY . ./
 
 # Build
-RUN CGO_ENABLED=0 GOOS=linux go build -o /app/app ./cmd/inventory/main.go
+RUN GOOS=linux go build -o /app/app ./cmd/inventory/main.go
 
-RUN ls
-
-FROM scratch
+FROM gcr.io/distroless/base-debian12
 
 EXPOSE 8080
 
-COPY --from=builder /app/* .
+WORKDIR /app
 
-CMD ["/app"]
+COPY . ./
+COPY --from=builder /app/app .
+
+CMD ["/app/app"]
