@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entry</title>
+    <link rel="stylesheet" href="assets/entry.css">
+    <script src="assets/drawing.js"></script>
+    <script src="assets/api.js"></script>
+    <script src="assets/helpers.js"></script>
+    <script src="assets/edit.js"></script>
+</head>
+<body onload="init()">
+    <header>
+        <h1>Add/Modify Entry</h1>
+    </header>
+
+    <div>
+        <canvas id="map" width="{{.CanvasWidth}}" height="{{.CanvasHeight}}" data-grid-size="{{.GridSize}}" data-asset-path= "{{.MapAssetPath}}"></canvas>
+    </div>
+    
+    <div id="buttons">
+        <button onclick="resetRectangles()">Reset Map</button>
+        <button onclick="deleteEntry()">Delete Entry</button>
+    </div>
+
+    <div>
+        <form>
+            <label for="name">Name</label><br>
+            <textarea name="Name" id="name" rows="1" cols="60"></textarea><br>
+
+            <label for="description">Description</label><br>
+            <textarea name="Description" id="description" rows="10" cols="60"></textarea><br>
+
+            <label for="notes">Notes</label><br>
+            <textarea name="Notes" id="notes" rows="10" cols="60"></textarea><br>
+
+            <button type="button" onclick="save()"><div id="save">Save</div><div class="lds-ellipsis" id="loader" style="display: none;"><div></div><div></div><div></div><div></div></div></button>
+        </form>
+    </div>
+</body>
+</html>

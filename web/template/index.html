@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid on Canvas</title>
+    <link rel="stylesheet" href="./assets/index.css">
+    <script src="./assets/buttons.js"></script>
+    <script src="./assets/api.js"></script>
+    <script src="./assets/drawing.js"></script>
+    <script src="./assets/helpers.js"></script>
+    <script src="./assets/search.js"></script>
+    <script src="./assets/index.js"></script>
+</head>
+
+<body onload="init()">
+    <header>
+        <h1>Inventory</h1>
+    </header>
+
+    <div class="search-bar">
+        <input id="search" type="search" placeholder="Start typing to search..." autocomplete="off" />
+    </div>
+
+    <div>
+        <canvas id="map" width="{{.CanvasWidth}}" height="{{.CanvasHeight}}" data-grid-size="{{.GridSize}}" data-asset-path= "{{.MapAssetPath}}"></canvas>
+
+        <div id="buttons">
+            <button onclick="addEditEntryButton('')">Add Entry</button>
+        </div>
+    </div>
+
+    <div id="entryList"></div>
+
+    <footer>
+        Made with ❤️ by cyaniccerulean<br>
+        Icons by <a href="https://icons8.com">Icons8</a>
+    </footer>
+</body>
+
+</html>
