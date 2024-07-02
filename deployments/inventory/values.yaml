@@ -25,6 +25,9 @@ serviceAccount:
 podAnnotations: {}
 podLabels: {}
 
+# additional environment variables
+additionalEnv: {}
+
 podSecurityContext: {}
 # fsGroup: 2000
 
@@ -72,6 +75,14 @@ readinessProbe:
   httpGet:
     path: /health
     port: http
+
+# Volume specification storing the inventory database
+volumeClaim:
+  accessModes:
+  - ReadWriteMany
+  capacity:
+    storage: 128Mi
+  storageClassName: ""
 
 # Additional volumes on the output Deployment definition.
 volumes: []

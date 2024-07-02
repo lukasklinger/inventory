@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: {{ include "inventory.fullname" . }}-data
+  labels:
+    volume: data
+spec:
+  storageClassName: {{ .Values.volumeClaim.storageClassName }}
+  accessModes: {{ toYaml .Values.volumeClaim.accessModes | nindent 4 }}
+  resources:
+    requests: {{ toYaml .Values.volumeClaim.capacity | nindent 6 }}
