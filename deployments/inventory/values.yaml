@@ -82,7 +82,7 @@ volumeClaim:
   - ReadWriteMany
   capacity:
     storage: 128Mi
-  storageClassName: ""
+  storageClassName: "ceph-filesystem"
 
 # Additional volumes on the output Deployment definition.
 volumes: []

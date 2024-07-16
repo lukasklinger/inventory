@@ -1,8 +1,7 @@
 // resets the map and shows rectangles for an entry
 function showRectanglesForEntry(entry) {
-    // reset map
+    // reset selected rectangles
     resetRectangles()
-    resetCanvas()
 
     // draw all rectangles
     entry.rectangles.forEach(rect => {
