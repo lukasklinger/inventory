@@ -3,5 +3,5 @@ name: inventory
 description: A Helm chart to deploy the inventory application
 type: application
 
-version: 0.2.2
-appVersion: "0.2.2"
+version: 0.2.3
+appVersion: "0.2.3"
