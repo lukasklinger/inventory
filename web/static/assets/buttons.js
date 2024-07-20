@@ -9,7 +9,7 @@ function showRectanglesForEntry(entry) {
     })
 
     // scroll to map
-    window.scrollTo(xCoord, yCoord);
+    window.scrollTo(0, 0);
 }
 
 // redirect to edit page
