@@ -27,14 +27,14 @@ function handleSearchPosts(query) {
     // if the search query is empty, show all entries
     if (!searchQuery) {
         for (let entry of entries) {
-            entry.style.display = "block"
+            entry.style.display = "table-row"
         }
     }
 
     // hide entries that do not contain the entered text
     for (let entry of entries) {
         if (entry.innerText.includes(searchQuery)) {
-            entry.style.display = "block"
+            entry.style.display = "table-row"
         } else {
             entry.style.display = "none"
         }

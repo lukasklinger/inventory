@@ -7,6 +7,9 @@ function showRectanglesForEntry(entry) {
     entry.rectangles.forEach(rect => {
         pushRectangle(rect.x, rect.y)
     })
+
+    // scroll to map
+    window.scrollTo(xCoord, yCoord);
 }
 
 // redirect to edit page

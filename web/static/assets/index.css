@@ -25,27 +25,28 @@ canvas {
 }
 
 #entryList {
-    padding-left: 2%;
-    padding-right: 2%;
-    margin: 10px;
-    -webkit-columns: 2 400px;
-    -moz-columns: 2 400px;
-    columns: 2 400px;
-    break-inside: avoid-column;
+    width: 100%;
+    display: table;
+    border-collapse: separate;
+    border-spacing: 0px 6px;
+    background-color: rgba(0, 0, 0, 0.04);
+    table-layout: fixed;
 }
 
 .entry {
-    margin: 10px;
-    padding: 8px;
-    text-align: left;
-    border: 1px solid #CCCCCC;
-    border-radius: 5px;
-    page-break-inside: avoid;
+    display: table-row;
+    background-color: #FFFFFF;
+}
+
+.entry h3, .entry p, .entry div {
+    display: table-cell;
+    word-wrap: break-word;
+    vertical-align: middle;
 }
 
 .entryButton {
-    height: 35px;
-    width: 35px;
+    height: 30px;
+    width: 30px;
     padding-left: 10px;
     padding-right: 10px;
 }
@@ -53,6 +54,7 @@ canvas {
 footer {
     font-size: 0.6rem;
     color: #CCCCCC;
+    padding: 20px;
 }
 
 footer a {
