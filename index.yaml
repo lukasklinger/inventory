@@ -2,6 +2,16 @@ apiVersion: v1
 entries:
   inventory:
   - apiVersion: v2
+    appVersion: 0.2.6
+    created: "2024-07-23T17:38:27.524199569Z"
+    description: A Helm chart to deploy the inventory application
+    digest: 053b471a45a6bb0f811ea6ea0e849af5c9e75d75cd5469482286341132418eb2
+    name: inventory
+    type: application
+    urls:
+    - https://github.com/lukasklinger/inventory/releases/download/inventory-0.2.6/inventory-0.2.6.tgz
+    version: 0.2.6
+  - apiVersion: v2
     appVersion: 0.2.5
     created: "2024-07-20T16:40:56.231721682Z"
     description: A Helm chart to deploy the inventory application
@@ -71,4 +81,4 @@ entries:
     urls:
     - https://github.com/lukasklinger/inventory/releases/download/inventory-0.1.0/inventory-0.1.0.tgz
     version: 0.1.0
-generated: "2024-07-20T16:40:56.231768831Z"
+generated: "2024-07-23T17:38:27.524266405Z"
