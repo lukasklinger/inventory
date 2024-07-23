@@ -35,7 +35,7 @@ function drawBackground() {
     }
 
     // draw grid lines
-    ctx.strokeStyle = "rgba(0, 0, 0, 0.1)";
+    ctx.strokeStyle = "rgba(0, 0, 0, 0.04)";
     ctx.lineWidth = 1;
 
     for (let x = 0; x <= canvas.width; x += gridSize) {
