@@ -33,7 +33,7 @@ function handleSearchPosts(query) {
 
     // hide entries that do not contain the entered text
     for (let entry of entries) {
-        if (entry.innerText.includes(searchQuery)) {
+        if (entry.innerText.toLowerCase().includes(searchQuery)) {
             entry.style.display = "table-row"
         } else {
             entry.style.display = "none"
